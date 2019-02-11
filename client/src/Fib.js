@@ -27,7 +27,7 @@ class Fib extends Component {
     };
 
     renderSeenIndexes() {
-        if (!this.state.seenIndexes || this.state.seenIndexes.length < 1) {
+        if (!this.state.seenIndexes) {
             return;
         }
 
