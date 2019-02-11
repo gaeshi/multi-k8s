@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: ololotrololo-com-tls
+spec:
+  secretName: ololotrololo-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: ololotrololo.com
+  dnsNames:
+    - ololotrololo.com
+    - www.ololotrololo.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - ololotrololo.com
+          - www.ololotrololo.com
